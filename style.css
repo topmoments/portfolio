@@ -1,0 +1,806 @@
+/* === Základ === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li a {
+  color: white;
+  /* nebo jiná barva */
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* === HERO sekce s obrázkem === */
+.hero {
+  position: relative;
+  height: 55vh;
+  background: url("images/pospichal_tomas.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.herokontakt {
+  position: relative;
+  height: 55vh;
+  background: url("images/DSC06113.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.heroomne {
+  position: relative;
+  height: 55vh;
+  background: url("images/animefest-12.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.herofotoplesy {
+  position: relative;
+  height: 55vh;
+  background: url("images/ples/23.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.herofotosvatby {
+  position: relative;
+  height: 55vh;
+  background: url("images/svatba/4.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.herofotoportrety {
+  position: relative;
+  height: 55vh;
+  background: url("images/portrety/8.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.herofotocestovani {
+  position: relative;
+  height: 55vh;
+  background: url("images/cestovani/32.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.herofotosport {
+  position: relative;
+  height: 55vh;
+  background: url("images/sport/14.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.herofotoakce {
+  position: relative;
+  height: 55vh;
+  background: url("images/akce/17.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* === Navigace === */
+.main-header {
+  width: 100%;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 1.0 rem;
+  /* přidá svislý prostor */
+}
+
+
+.nav-left,
+.nav-right {
+  display: flex;
+  list-style: none;
+  flex: 1;
+  /* zabere rovnoměrně prostor */
+  justify-content: space-evenly;
+  /* rovnoměrně mezi sebou */
+}
+
+
+.nav-left a,
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Hover efekt */
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #61a5f5;
+  /* světle modrá */
+}
+
+/* Aktivní stránka (např. Úvod) */
+.nav-left a.active,
+.nav-right a.active {
+  color: #f573bc;
+  /* světle růžová */
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  height: 75px;
+}
+
+/* === Text v hero sekci === */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  /* nastav výšku podle potřeby (nižší číslo = výš) */
+  left: 2rem;
+  z-index: 2;
+  text-align: left;
+  left: 10%;
+  transform: translateY(-50%);
+  /* optické zarovnání na střed výšky */
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background: white;
+  color: black;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #eee;
+}
+
+/* === Responzivita === */
+@media (max-width: 768px) {
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    position: static;
+    transform: none;
+    margin: 0.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
+
+
+.highlight {
+  background: #0a2742;
+  /* tmavě modrá */
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.highlight-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.highlight-content h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  /* bílý text */
+  text-align: left;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.0rem;
+  grid-auto-flow: dense;
+  max-width: 1200px;
+  /* zarovnání obsahu */
+  margin: 2rem auto;
+  /* vycentrování */
+  padding: 0 2rem;
+  /* vnitřní mezery po stranách */
+}
+
+
+/* Společný styl */
+.gallery a {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* === PORTRAIT: zabere 2 sloupce z 6 (1/3 šířky) === */
+.gallery a.portrait {
+  aspect-ratio: 2 / 3;
+  grid-column: span 2;
+  max-height: 800px;
+  width: 100%;
+}
+
+/* LANDSCAPE – 1/2 šířky (3 z 6 sloupců) */
+.gallery a.landscape {
+  aspect-ratio: 3 / 2;
+  grid-column: span 3;
+  max-height: 500px;
+  width: 100%;
+}
+
+/* === RESPONSIVE: menší obrazovky === */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery a.portrait,
+  .gallery a.landscape {
+    grid-column: span 2;
+  }
+}
+
+
+.main-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 2rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-logo-col {
+  flex-shrink: 0;
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+  margin-top: 35px;
+}
+
+.footer-socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.footer-socials li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-socials img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-right {
+  text-align: right;
+  max-width: 300px;
+}
+
+.footer-right p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.footer-btn:hover {
+  background-color: #ff9cd3;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+}
+
+
+/* Responsivita */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.kontakt-hero {
+  height: 35vh;
+  background: url("images/kontakt-bg.jpg") center/cover no-repeat;
+}
+
+.contact-form-section {
+  background-color: #061635;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form-wrapper {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.modern-form h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #0a2742;
+  text-align: center;
+}
+
+.contact-form-section {
+  background-color: #061635;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form-wrapper {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.form-wrapper h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #0a2742;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fefefe;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #0a2742;
+  box-shadow: 0 0 0 3px rgba(10, 39, 66, 0.15);
+  outline: none;
+}
+
+.btn-submit {
+  background-color: #0a2742;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: #12385c;
+}
+
+@media (max-width: 600px) {
+  .form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .radio-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem 1rem;
+  padding-top: 0.5rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fefefe;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="date"]:focus {
+  border-color: #0a2742;
+  box-shadow: 0 0 0 3px rgba(10, 39, 66, 0.15);
+  outline: none;
+}
+
+
+
+/* Responzivita */
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .form-image {
+    text-align: center;
+  }
+
+  .form-image img {
+    max-width: 200px;
+  }
+}
+
+/* Základní struktura */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+}
+
+/* Skrytí hamburgeru ve velkých rozlišeních */
+.hamburger {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobilní menu */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1em;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.about-section {
+  background-color: #0a0f2c;
+  color: white;
+  padding: 4em 2em;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2em;
+}
+
+.about-image img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 1em;
+}
+
+.about-text {
+  max-width: 700px;
+}
+
+.about-text h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.about-text h3 {
+  margin-top: 1.5em;
+  font-size: 1.5em;
+}
+
+.about-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.about-columns div {
+  flex: 1;
+  min-width: 150px;
+}
+
+.about-columns ul {
+  padding-left: 1em;
+}
+
+.about-closing {
+  margin-top: 2em;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+
+/* Hero */
+.herofoto {
+  position: relative;
+  height: 55vh;
+  background: url("images/hospic_konference-17.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.hero-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  font-weight: bold;
+}
+
+/* Kategorie */
+.photo-categories {
+  background-color: #0a2742;
+  text-decoration: none;
+  padding-top: 4em;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.photo-categories ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.photo-categories li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+
+.photo-categories li a:hover {
+  color: #61a5f5
+}
+
+.photo-categories li a.active {
+  color: #ff2b9d;
+  border-color: #ff2b9d;
+  text-decoration: none;
+}
+
+/* Galerie */
+.photo-gallery {
+  background-color: #0a0f2c;
+  padding: 2em;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+/* Dropdown menu */
+.nav-right .dropdown {
+  position: relative;
+}
+
+.nav-right .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0a0f2c;
+  padding: 0.5em 0;
+  list-style: none;
+  z-index: 1000;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-right .dropdown-menu li {
+  text-align: left;
+}
+
+.nav-right .dropdown-menu li a {
+  display: block;
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.nav-right .dropdown-menu li a:hover {
+  background-color: #1a8cff;
+  /* světle modrá */
+}
+
+/* Show menu on hover */
+.nav-right .dropdown:hover .dropdown-menu {
+  display: block;
+}
