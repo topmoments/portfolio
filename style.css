@@ -91,7 +91,6 @@ body {
   justify-content: space-between;
 }
 
-/* === Navigace === */
 .main-header {
   width: 100%;
 }
@@ -101,22 +100,47 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  margin-top: 1.0 rem;
-  /* přidá svislý prostor */
+  margin-top: 1rem; /* opraveno */
 }
 
-
+/* Obě části navigace vlevo i vpravo */
 .nav-left,
 .nav-right {
   display: flex;
   list-style: none;
   flex: 1;
-  /* zabere rovnoměrně prostor */
   justify-content: space-evenly;
-  /* rovnoměrně mezi sebou */
+  gap: 2rem;
+  align-items: center;
 }
 
+/* Mobilní menu */
+@media (max-width: 768px) {
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .nav-left.show,
+  .nav-right.show {
+    display: flex;
+    flex-direction: column;
+    background-color: #0a2742;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-right.show {
+    margin-top: 5rem; /* posune pravou část dolů */
+  }
+
+  .nav-left li,
+  .nav-right li {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Odkazy v navigaci */
 .nav-left a,
 .nav-right a {
   color: white;
@@ -125,18 +149,14 @@ body {
   transition: color 0.3s;
 }
 
-/* Hover efekt */
 .nav-left a:hover,
 .nav-right a:hover {
-  color: #61a5f5;
-  /* světle modrá */
+  color: #61a5f5; /* světle modrá */
 }
 
-/* Aktivní stránka (např. Úvod) */
 .nav-left a.active,
 .nav-right a.active {
-  color: #f573bc;
-  /* světle růžová */
+  color: #f573bc; /* světle růžová */
 }
 
 .logo {
@@ -803,4 +823,116 @@ input[type="date"]:focus {
 /* Show menu on hover */
 .nav-right .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+.menu-toggle .bar {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    z-index: 10;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 9;
+  }
+
+  .nav-left.show,
+  .nav-right.show {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: none;
+    box-shadow: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu li a {
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+/* Původně skryj mobilní menu */
+.mobile-hidden {
+  display: none;
+}
+
+/* Po kliknutí na burger zobraz */
+.mobile-menu.show {
+  display: block;
+}
+
+/* Přidej i nějaký styl, ať menu vypadá lépe */
+.mobile-menu {
+  background-color: black;
+  padding: 1rem;
+  position: absolute;
+  top: 70px; /* nebo tolik, kolik je výška headeru */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.mobile-menu {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+.mobile-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
