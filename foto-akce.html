@@ -4,18 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foto sport | Tomáš Pospíchal</title>
+  <title>Úvod | Tomáš Pospíchal</title>
   <link rel="stylesheet" href="style.css">
 
   <!-- GLightbox CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 
-<body>
+
+<body class="kontakt">
   <section class="herofotoakce">
     <div class="hero-overlay">
-      <header class="main-header">
+      <header class="main-header" >
         <nav class="nav-wrapper">
+            <button class="menu-toggle" aria-label="Otevřít menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
           <ul class="nav-left">
             <li><a href="index.html">Úvod</a></li>
             <li><a href="omne.html">O mně</a></li>
@@ -27,12 +33,12 @@
 
           <ul class="nav-right">
             <li class="dropdown">
-              <a href="foto-plesy.html">Foto</a>
+              <a href="foto-plesy.html" class="active">Foto</a>
               <ul class="dropdown-menu">
                 <li><a href="foto-plesy.html">Plesy</a></li>
                 <li><a href="foto-svatby.html">Svatby</a></li>
                 <li><a href="foto-sport.html">Sport</a></li>
-                <li><a href="foto-akce.html">Akce</a></li>
+                <li><a href="foto-akce.html" class="active">Akce</a></li>
                 <li><a href="foto-cestovani.html">Cestování</a></li>
                 <li><a href="foto-portrety.html">Portréty</a></li>
               </ul>
@@ -122,15 +128,30 @@
   </div>
 </section>
 
-  <!-- GLightbox JS -->
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+ <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
     const lightbox = GLightbox({
       selector: '.glightbox',
       autoplayVideos: true,
       loop: true,
-      slideShowInterval: 3000, // slideshow každé 3 sekundy
+      slideShowInterval: 3000,
       autoplay: true
+    });
+  </script>
+
+  <!-- Jednotný JS pro mobilní menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      const navLeft = document.querySelector('.nav-left');
+      const navRight = document.querySelector('.nav-right');
+
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        navLeft.classList.toggle('show');
+        navRight.classList.toggle('show');
+      });
     });
   </script>
 
@@ -159,7 +180,6 @@
         <a href="mailto:tomaspospichal03@gmail.com" class="footer-btn">NAPIŠTE MI!</a>
       </div>
     </div>
-  </footer>
   </footer>
 </body>
 
