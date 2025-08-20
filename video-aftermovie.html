@@ -74,7 +74,7 @@
             <li><a href="video-dron.html">Dron</a></li>
         </ul>
     </nav>
-      <section class="highlight">
+    <section class="highlight">
         <div class="video-grid">
             <div class="video-cardytb">
                 <iframe src="https://www.youtube.com/embed/5BFlD2oDlTI" allowfullscreen></iframe>
@@ -124,5 +124,19 @@
         </div>
     </footer>
 </body>
+  <!-- Jednotný JS pro mobilní menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      const navLeft = document.querySelector('.nav-left');
+      const navRight = document.querySelector('.nav-right');
 
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        navLeft.classList.toggle('show');
+        navRight.classList.toggle('show');
+      });
+    });
+  </script>
+  
 </html>
