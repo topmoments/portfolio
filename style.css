@@ -21,14 +21,14 @@ body {
 .hero {
   position: relative;
   height: 55vh;
-  background: url("images/pospichal_tomas.jpg") center/cover no-repeat;
+  background: url("images/akce/telc8-95.jpg") center/cover no-repeat;
   color: white;
 }
 
 .herokontakt {
   position: relative;
   height: 55vh;
-  background: url("images/DSC06113.jpg") center/cover no-repeat;
+  background: url("images/3budapest.jpg") center/cover no-repeat;
   color: white;
 }
 
@@ -38,6 +38,7 @@ body {
   background: url("images/animefest-12.jpg") center/cover no-repeat;
   color: white;
 }
+
 
 .herofotoplesy {
   position: relative;
@@ -56,7 +57,7 @@ body {
 .herofotoportrety {
   position: relative;
   height: 55vh;
-  background: url("images/portrety/8.jpg") center/cover no-repeat;
+  background: url("images/portrety/22.jpg") center/cover no-repeat;
   color: white;
 }
 
@@ -77,10 +78,37 @@ body {
 .herofotoakce {
   position: relative;
   height: 55vh;
-  background: url("images/akce/17.jpg") center/cover no-repeat;
+  background: url("images/akce/telc8-97.jpg") center/cover no-repeat;
   color: white;
 }
 
+.herovideo {
+  position: relative;
+  height: 55vh;
+  background: url("images/akce/telc1-70.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.herovideo-ytb {
+  position: relative;
+  height: 55vh;
+  background: url("images/DSC04792.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.herovideo-aftermovie {
+  position: relative;
+  height: 55vh;
+  background: url("images/akce/telc1-81.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.herovideo-dron {
+  position: relative;
+  height: 55vh;
+  background: url("images/cestovani/44.jpg") center/cover no-repeat;
+  color: white;
+}
 .hero-overlay {
   background: rgba(0, 0, 0, 0.4);
   width: 100%;
@@ -100,7 +128,8 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  margin-top: 1rem; /* opraveno */
+  margin-top: 1rem;
+  /* opraveno */
 }
 
 /* Obě části navigace vlevo i vpravo */
@@ -131,7 +160,8 @@ body {
   }
 
   .nav-right.show {
-    margin-top: 5rem; /* posune pravou část dolů */
+    margin-top: 5rem;
+    /* posune pravou část dolů */
   }
 
   .nav-left li,
@@ -151,12 +181,14 @@ body {
 
 .nav-left a:hover,
 .nav-right a:hover {
-  color: #61a5f5; /* světle modrá */
+  color: #61a5f5;
+  /* světle modrá */
 }
 
 .nav-left a.active,
 .nav-right a.active {
-  color: #f573bc; /* světle růžová */
+  color: #f573bc;
+  /* světle růžová */
 }
 
 .logo {
@@ -184,6 +216,60 @@ body {
 }
 
 .hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.heroomne h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.herofotoplesy h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.herofotosvatby h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.herofotoportrety h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.herofotocestovani h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.herofotosport h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.herofotoakce h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.herokontakt h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.herovideo h1 {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -223,7 +309,7 @@ body {
   }
 
   .hero h1 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 
   .btn {
@@ -323,7 +409,7 @@ body {
 .main-footer {
   background-color: #000;
   color: #fff;
-  padding: 3rem 2rem;
+  padding: 3rem 8rem;
 }
 
 .footer-container {
@@ -680,10 +766,14 @@ input[type="date"]:focus {
   font-size: 1.5em;
 }
 
+.about-text h4 {
+  margin-bottom: 0.5em;
+}
+
 .about-columns {
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
+  gap: 7em;
   margin-top: 1em;
 }
 
@@ -698,8 +788,7 @@ input[type="date"]:focus {
 
 .about-closing {
   margin-top: 2em;
-  font-weight: 500;
-  line-height: 1.6;
+  font-weight: 700px;
 }
 
 
@@ -918,7 +1007,8 @@ input[type="date"]:focus {
   background-color: black;
   padding: 1rem;
   position: absolute;
-  top: 70px; /* nebo tolik, kolik je výška headeru */
+  top: 70px;
+  /* nebo tolik, kolik je výška headeru */
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -935,4 +1025,81 @@ input[type="date"]:focus {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 videa vedle sebe */
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.video-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background: #000;
+}
+
+.video-card iframe,
+.video-card img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  /* vertikální poměr */
+  display: block;
+  border: none;
+}
+
+.video-cardytb {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background: #000;
+}
+
+.video-cardytb iframe,
+.video-cardytb img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* vertikální poměr */
+  display: block;
+  border: none;
+}
+
+/* Instagram karta */
+.instagram-card {
+  text-decoration: none;
+  display: block;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+/* Responsivní pro mobil */
+@media (max-width: 900px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 vedle sebe */
+  }
+}
+
+@media (max-width: 600px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    /* 1 vedle sebe */
+  }
 }
