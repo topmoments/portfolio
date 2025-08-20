@@ -194,7 +194,7 @@ body {
 .logo {
   position: absolute;
   left: 50%;
-  top: -20px;
+  top: -15px;
   transform: translateX(-50%);
 }
 
