@@ -87,7 +87,7 @@
             </div>
         </div>
     </section>
-
+    </section>
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-left">
@@ -117,5 +117,19 @@
         </div>
     </footer>
 </body>
+  <!-- Jednotný JS pro mobilní menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      const navLeft = document.querySelector('.nav-left');
+      const navRight = document.querySelector('.nav-right');
 
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        navLeft.classList.toggle('show');
+        navRight.classList.toggle('show');
+      });
+    });
+  </script>
+  
 </html>
