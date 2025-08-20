@@ -194,13 +194,18 @@ body {
 .logo {
   position: absolute;
   left: 50%;
-  top: -15px;
+  top: -20px;
   transform: translateX(-50%);
 }
 
 .logo img {
-  height: 100px;
+  height: 75px;
 }
+
+  .logo img {
+    height: 50px;  /* menší logo */
+  }
+
 
 /* === Text v hero sekci === */
 .hero-content {
@@ -486,17 +491,17 @@ body {
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .footer-left {
     flex-direction: column;
-    align-items: center;
+    align-items: left;
   }
 
   .footer-right {
-    text-align: center;
+    text-align: left;
   }
 }
 
