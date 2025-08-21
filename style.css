@@ -217,81 +217,40 @@ body {
   /* optické zarovnání na střed výšky */
 }
 
-.hero h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.heroomne h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.herofotoplesy h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.herofotosvatby h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.herofotoportrety h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.herofotocestovani h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.herofotosport h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.herofotoakce h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.herokontakt h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.herovideo h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.herovideo-ytb h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.herovideo-aftermovie h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
+.hero h1,
+.heroomne h1,
+.herofotoplesy h1,
+.herofotosvatby h1,
+.herofotoportrety h1,
+.herofotocestovani h1,
+.herofotosport h1,
+.herofotoakce h1,
+.herokontakt h1,
+.herovideo h1,
+.herovideo-ytb h1,
+.herovideo-aftermovie h1,
 .herovideo-dron h1 {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .hero h1,
+  .heroomne h1,
+  .herofotoplesy h1,
+  .herofotosvatby h1,
+  .herofotoportrety h1,
+  .herofotocestovani h1,
+  .herofotosport h1,
+  .herofotoakce h1,
+  .herokontakt h1,
+  .herovideo h1,
+  .herovideo-ytb h1,
+  .herovideo-aftermovie h1,
+  .herovideo-dron h1 {
+    font-size: 1.6rem;   /* menší nadpis pro mobily */
+    line-height: 1.3;
+  }
 }
 
 .btn {
