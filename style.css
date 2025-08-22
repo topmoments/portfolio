@@ -11,6 +11,10 @@ li a {
   text-decoration: none;
 }
 
+.custom-link {
+  color: white;
+  text-decoration: none;
+}
 
 
 body {
