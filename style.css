@@ -5,26 +5,12 @@
   box-sizing: border-box;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:link, a:visited {
-  color: white;
-  text-decoration: none;
-}
-
 li a {
   color: white;
   /* nebo jiná barva */
   text-decoration: none;
 }
 
-.a a:hover {
-  color: #61a5f5;
-  /* světle modrá */
-}
 
 
 body {
