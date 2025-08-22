@@ -5,6 +5,16 @@
   box-sizing: border-box;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 li a {
   color: white;
   /* nebo jiná barva */
