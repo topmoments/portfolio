@@ -21,6 +21,16 @@ li a {
   text-decoration: none;
 }
 
+.a a:hover {
+  color: #61a5f5;
+  /* světle modrá */
+}
+
+.li a:hover {
+  color: #61a5f5;
+  /* světle modrá */
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #fff;
