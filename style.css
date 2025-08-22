@@ -16,6 +16,10 @@ li a {
   text-decoration: none;
 }
 
+.custom-link:hover {
+  color: #61a5f5; /* světle modrá při přejetí */
+  text-decoration: underline; /* volitelné */
+}
 
 body {
   font-family: 'Segoe UI', sans-serif;
