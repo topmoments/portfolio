@@ -11,16 +11,6 @@ li a {
   text-decoration: none;
 }
 
-.custom-link {
-  color: white;
-  text-decoration: none;
-}
-
-.custom-link:hover {
-  color: #61a5f5; /* světle modrá při přejetí */
-  text-decoration: underline; /* volitelné */
-}
-
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #fff;
@@ -392,6 +382,7 @@ body {
     /* zarovnání obsahu */
     margin: 2rem auto;
     /* vycentrování */
+    padding: 0 2rem;
     /* vnitřní mezery po stranách */
   }
 
@@ -485,7 +476,9 @@ body {
     align-items: flex-start;
     text-align: left;
   }
-
+  .footer-logo {
+  align-items: center;  
+  }
   .footer-left {
     flex-direction: column;
     align-items: left;
@@ -498,7 +491,7 @@ body {
   .footer-btn {
     width: 100%;
     max-width: 300px;
-    align-items: left;
+    align-items: center;
   }
 }
 
@@ -836,6 +829,39 @@ input[type="date"]:focus {
   color: #ff2b9d;
   border-color: #ff2b9d;
   text-decoration: none;
+}
+
+.center-links {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;   /* zarovnání na střed */
+  align-items: center;
+  gap: 40px;                 /* mezera mezi odkazy */
+}
+
+.center-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.center-link:hover {
+  color: #ff2b9d;            /* růžová při hoveru */
+}
+
+
+h3 {
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  gap: 1em;
+  list-style: none;
+  margin-top: 0px;
 }
 
 /* Galerie */
